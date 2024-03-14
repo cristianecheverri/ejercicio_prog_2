@@ -2,6 +2,7 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 import venta.Venta;
 
+
 /**
  * Clase para repasar conceptos de programación
  * @author Cristian Echeverri
