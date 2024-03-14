@@ -17,14 +17,32 @@ public class Main {
    */
   public static void main(String[] args) {
     Venta ventica = new Venta();
-    String cantidadProductoDialogo =  JOptionPane.showInputDialog(null,"Ingrese la cantidad de productos:", "Cantidad productos", JOptionPane.INFORMATION_MESSAGE);
+    String cantidadProductoDialogo = JOptionPane.showInputDialog(
+      null,
+      "Ingrese la cantidad de productos:",
+      "Cantidad productos",
+      JOptionPane.INFORMATION_MESSAGE
+    );
     int cantidadProducto = Integer.parseInt(cantidadProductoDialogo);
-    String valorUnitarioDialogo = JOptionPane.showInputDialog("Ingrese el valor unitario del producto");
+    String valorUnitarioDialogo = JOptionPane.showInputDialog(
+      "Ingrese el valor unitario del producto"
+    );
     double valorUnitario = Double.parseDouble(valorUnitarioDialogo);
 
-    int tipoCliente = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tipo de cliente"));
-    double valorVenta = ventica.calcularValorVenta(valorUnitario, cantidadProducto, tipoCliente);
-    String mensaje = String.format("Para el cliente de tipo %d %n, Cantidad de productos : %d %n, Valor unitario %.2f %n. El valor de la venta es: %.2f %n", tipoCliente, cantidadProducto, valorUnitario, valorVenta);
-    JOptionPane.showMessageDialog(null, mensaje);
+    int tipoCliente = Integer.parseInt(
+      JOptionPane.showInputDialog("Ingrese el tipo de cliente")
+    );
+    double valorVenta = ventica.calcularValorVenta(
+      valorUnitario,
+      cantidadProducto,
+      tipoCliente
+    );
+    String mensaje = String.format(
+      "Para el cliente de tipo %d %n, Cantidad de productos : %d %n, Valor unitario %.2f %n. El valor de la venta es: %.2f %n",
+      tipoCliente,
+      cantidadProducto,
+      valorUnitario,
+      valorVenta
+    );
   }
 }
