@@ -15,6 +15,9 @@ public class MainCalculadora {
             case 1:
                 resultado = operaciones.sumar(a, b);
                 break;
+            case 10:
+                resultado = operaciones.sumar((int)a, (int)b);
+                break;
             case 2:
                 resultado = operaciones.restar(a, b);
                 break;
@@ -44,4 +47,5 @@ public class MainCalculadora {
         }
         JOptionPane.showMessageDialog(null, "El resultado de la operacion es: " + resultado);
     }
+
 }

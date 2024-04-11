@@ -3,6 +3,12 @@ package calculadora;
 public class Operaciones {
     
     public double sumar(double a, double b) {
+        System.out.println("sumando decimales");
+        return a + b;
+    }
+
+    public int sumar(int a, int b) {
+        System.out.println("sumando enteros");
         return a + b;
     }
 

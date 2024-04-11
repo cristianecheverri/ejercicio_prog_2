@@ -1,12 +1,24 @@
 package frasco;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class FrascoDeDulce {
     
     String sabor;
     int cantidad;
-    String fechaEnvasado;
+    LocalDateTime fechaEnvasado;
 
-    public boolean envasar(String sabor, int cantidad, String fechaEnvasado) {
+    public FrascoDeDulce(String sabor, LocalDateTime fechaEnvasado) {
+        this.sabor = sabor;
+        this.fechaEnvasado = fechaEnvasado;
+    }
+
+    public LocalDateTime getFechaEnvasado() {
+        return this.fechaEnvasado;
+    }
+
+    public boolean envasar(String sabor, int cantidad, LocalDateTime fechaEnvasado) {
         int cantidadActual = this.consultarCantidad();
         this.sabor = sabor;
         if (cantidadActual < 200) {

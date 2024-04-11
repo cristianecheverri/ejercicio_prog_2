@@ -1,21 +1,29 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDateTime;
 
 public class Files {
 
   public static void main(String[] args) {
     try {
-      FileWriter myWriter = new FileWriter("filename.txt");
-      myWriter.write("Files in Java might be tricky, but it is fun enough!");
-      myWriter.close();
-      System.out.println("Successfully wrote to the file.");
+      BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("file.txt", false));
+      bufferedWriter.write("Mi linea");
+      bufferedWriter.newLine();
+      bufferedWriter.write("Este es mi archivo de texto\n");
+      bufferedWriter.close();
 
-      LocalDateTime myObj = LocalDateTime.now();
-        System.out.println(myObj);
-        System.out.println(myObj.toLocalDate());
+      BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
+      String line = reader.readLine();
+
+      while (line != null) {
+        System.out.println(line);
+        line = reader.readLine();
+      }
+
+      reader.close();
     } catch (IOException e) {
-      System.out.println("An error occurred.");
       e.printStackTrace();
     }
   }

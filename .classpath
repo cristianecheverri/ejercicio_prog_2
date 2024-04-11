@@ -1,0 +1,5 @@
+<classpath>
+    <classpathentry kind="src" path="src"/>
+    <classpathentry kind="lib" path="postgresql-42.7.3.jar"/> <!-- Ajusta el nombre del archivo JAR y su ruta -->
+    <classpathentry kind="output" path="bin"/>
+</classpath>
